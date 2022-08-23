@@ -1,3 +1,4 @@
+
 const socket=io()
 const msg_btn=document.querySelector('#msgbtn')
 const btn=document.querySelector('#location')
