@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
@@ -13,10 +13,9 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "express": "^4.17.2",
-    "socket.io": "^4.4.0",
-    "nodemon": "^2.0.15"
+    "socket.io": "^4.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.19"
   }
 }
