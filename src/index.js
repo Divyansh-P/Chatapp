@@ -52,9 +52,6 @@ io.on('connection',(socket)=>{
         }
     })
 })
-app.listen(Port,()=>{
-    console.log(`app is listed on ${Port}`)
-})
 server.listen(Port,()=>{
     console.log(`app is listed on ${Port}`)
 })
