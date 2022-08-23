@@ -1,4 +1,10 @@
-const socket=io()
+const io=require('socket.io-client')
+const socket=io("https://divychatapp.herokuapp.com/", {
+    withCredentials: true,
+    extraHeaders: {
+      "my-custom-header": "abcd"
+    }
+  });
 const msg_btn=document.querySelector('#msgbtn')
 const btn=document.querySelector('#location')
 const formin=document.querySelector('#inp')

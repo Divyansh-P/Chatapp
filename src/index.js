@@ -9,7 +9,13 @@ const app=express()
 const Port=process.env.Port||5000
 const publicDirectoryPath=path.join(__dirname,'../public')
 const server=http.createServer(app)
-const io=socketio(server)
+const io=socketio(server,{
+    cors:{
+        origin:"https://divychatapp.herokuapp.com/",
+        allowedHeaders: ["my-custom-header"],
+        credentials: true
+    }
+    })
 app.use(express.static(publicDirectoryPath))
 io.on('connection',(socket)=>{
     console.log('new connection established')
