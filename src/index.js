@@ -5,6 +5,7 @@ const cors = require('cors')
 const socketio=require('socket.io')
 const {generatemessage,generateurl}=require('./utils/message')
 const {addUser,removeUser,getUser,getUserinRoom}=require('./utils/users')
+const { read } = require('fs')
 const app=express()
 app.use(cors())
 const Port=process.env.Port||3000
@@ -50,6 +51,9 @@ io.on('connection',(socket)=>{
             })
         }
     })
+})
+app.listen(Port,()=>{
+    console.log(`app is listed on ${Port}`)
 })
 server.listen(Port,()=>{
     console.log(`app is listed on ${Port}`)
