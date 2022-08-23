@@ -1,15 +1,18 @@
 const express=require('express')
 const path=require('path')
 const http=require('http')
+const cors = require('cors')
 const socketio=require('socket.io')
 const Filter=require('bad-words')
 const {generatemessage,generateurl}=require('./utils/message')
 const {addUser,removeUser,getUser,getUserinRoom}=require('./utils/users')
 const app=express()
+app.use(cors())
 const Port=process.env.Port||5000
 const publicDirectoryPath=path.join(__dirname,'../public')
 const server=http.createServer(app)
 const io=socketio(server)
+
 app.use(express.static(publicDirectoryPath))
 io.on('connection',(socket)=>{
     console.log('new connection established')

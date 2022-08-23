@@ -6,7 +6,6 @@ const messageTemplate=document.querySelector('#message-template').innerHTML
 const message=document.querySelector('#messages')
 const locationTemplate=document.querySelector('#location-template').innerHTML
 const sidebarTemplate=document.querySelector('#sidebar-template').innerHTML
-
 const {Username , room}=Qs.parse(location.search,{ignoreQueryPrefix:true})
 const autoscroll=()=>{
 const $newMessage=message.lastElementChild
